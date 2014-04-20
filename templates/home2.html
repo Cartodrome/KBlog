@@ -1,0 +1,21 @@
+{% extends "css_and_js.html" %}
+{% block title %} Home2 {% endblock %}
+{% block main_content %}  
+  {% include 'navbar.html' %}
+
+<div class="container-fluid">
+  <div class="row">
+    <div class="col-md-9">
+
+  {% include 'left_column.html' %}
+
+    </div>
+    <div class="col-md-3">
+    
+  {% include 'right_column.html'%}
+
+    </div>     
+  </div>
+</div>
+
+{% endblock %}

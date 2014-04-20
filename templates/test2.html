@@ -1,0 +1,161 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width", initial-scale="1">
+    <title>{% block title %}{% endblock %}</title>
+    <link href="//netdna.bootstrapcdn.com/font-awesome/4.0.3/css/font-awesome.css" rel="stylesheet">
+    <link href="{{ url_for('static', filename='css/bootstrap.min.css') }}" rel="stylesheet" media="screen">
+    <link href="{{ url_for('static', filename='css/main.css') }}" rel="stylesheet">
+  </head>
+  <body>
+
+<!--START NavBar ########################################################## -->
+    <nav class="navbar navbar-default navbar-fixed-top" role="navigation">
+      <div class="container-fluid">
+        <!-- Brand and toggle get grouped for better mobile display -->
+        <div class="navbar-header">
+          <!-- Button for toggling the navcar-->
+          <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1">
+            <span class="sr-only">Toggle navigation</span>
+            <span class="icon-bar"></span>
+            <span class="icon-bar"></span>
+            <span class="icon-bar"></span>
+          </button>
+          <!-- Brandname -->
+          <a class="navbar-brand" href="#">Kblog</a>
+        </div>
+    
+        <!-- Collect the nav links, forms, and other content for toggling -->
+        <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
+          <form class="navbar-form navbar-right" role="search">
+            <div class="form-group">
+              <input type="text" class="form-control" placeholder="Search">
+            </div>
+            <button type="submit" class="btn btn-default">Submit</button>
+          </form>
+          <ul class="nav navbar-nav navbar-right">
+            <li class="active"><a href="#">Home</a></li>
+            <li class="dropdown">
+              <a href="#" class="dropdown-toggle" data-toggle="dropdown">Tags <b class="caret"></b></a>
+              <ul class="dropdown-menu">
+                <li><a href="#">Fashion</a></li>
+                <li><a href="#">Beauty</a></li>
+                <li><a href="#">Food</a></li>
+                <li class="divider"></li>
+                <li><a href="#">Archive</a></li>
+              </ul>
+            <li><a href="#">About</a></li>
+            </li>
+
+          </ul>  
+        </div><!-- /.navbar-collapse -->
+      </div><!-- /.container-fluid -->
+    </nav>
+<!--END Navbar #############################################################-->
+
+  <div class="container-fluid">
+    <div class="row">
+
+<!--START Left Column ######################################################-->
+       <div class="col-md-9">
+        <div id="left">
+          <div class="row">
+            <div id='left2'>
+            <div class="col-md-2"></div>
+            <div class="col-md-3">
+              <div class="well">
+                <h2>Blog 1</h2>
+                <p> description here. </p>
+              </div>
+            </div>
+            <div class="col-md-3">
+              <div class="well">
+                <h2>Blog 2</h2>
+                <p> description here. </p>
+              </div>
+            </div>
+            <div class="col-md-3">
+              <div class="well">
+                <h2>Blog 3</h2>
+                <p> description here. </p>
+              </div>
+            </div>
+            <div class="col-md-1"></div>
+          </div>
+          <div class="row">
+            <div class="col-md-2"></div>
+            <div class="col-md-9">
+              <div class="panel panel-default">
+                <div class="panel-body">
+                   <h1>Latest Blog</h1>
+                   <p> All the writing and stuff. </p>
+                   <p> Lots to say. </p>
+                   <p> Wow 2 whole paragraphs. </p>
+                </div>
+              </div>
+            </div>
+            <div class="col-md-1"></div>
+          </div>
+        </div>  
+        </div>
+      </div>
+<!--END Left Column ########################################################-->
+
+<!--START Right Column #####################################################-->
+      <div class="col-md-3">
+        <div id="right">
+          <div class="row">
+            <div class="col-md-1"></div>
+            <div class="col-md-10">
+
+  <!--START Social Media ###################################################-->
+              <div class="panel panel-default">
+                <div class="panel-heading">Social Media</div>
+                <div class="panel-body">
+                  <div class="btn-group btn-group-lg">
+                    <button type="button" class="btn btn-default">
+                      <a href="#"><i class="fa fa-facebook fa-stack-3x"></i></a>
+                    </button>
+                    <button type="button" class="btn btn-default">
+                      <a href="#"><i class="fa fa-linkedin fa-stack-3x"></i></a>
+                    </button>
+                    <button type="button" class="btn btn-default">
+                      <a href="#"><i class="fa fa-twitter fa-stack-3x"></i></a>
+                    </button>
+                  </div>
+                </div>
+              </div>
+  <!--END Social Media #####################################################-->
+
+  <!--START Archive ###################################################-->
+              <div class="panel panel-default">
+                <div class="panel-heading">Archive</div>
+                <div class="panel-body">
+                  <ul class="nav nav-pills nav-stacked">
+                    <li><a href="#"><span class="glyphicon glyphicon-plus"></span>&emsp;January</a></li>
+                    <li><a href="#"><span class="glyphicon glyphicon-minus"></span>&emsp;February</a></li>
+                    <ul class="nav nav-pills nav-stacked">
+                      <li><a href="#"><span class="glyphicon glyphicon-chevron-right"></span>&emsp;This is a blog.</a></li> 
+                      <li><a href="#"><span class="glyphicon glyphicon-chevron-right"></span>&emsp;This is another blog.</a></li>
+                      <li><a href="#"><span class="glyphicon glyphicon-chevron-right"></span>&emsp;Gottta love blogs.</a></li>
+                    </ul>
+                    <li><a href="#"><span class="glyphicon glyphicon-plus"></span>&emsp;March</a></li>
+                </div>
+              </div>
+  <!--END Social Media #####################################################-->
+
+            </div>
+            <div class="col-md-1"></div>
+          </div>
+        </div>
+      </div>
+<!--END Right Column #######################################################-->
+
+    </div>
+  </div>
+
+  <script src="http://code.jquery.com/jquery-latest.js"></script>
+  <script src="{{ url_for('static', filename='js/bootstrap.min.js') }}"></script>
+  </body>
+</html>

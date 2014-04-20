@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width", initial-scale="1">
+    <title>{% block title %}{% endblock %}</title>
+    <link href="//netdna.bootstrapcdn.com/font-awesome/4.0.3/css/font-awesome.css" rel="stylesheet">
+    <link href="{{ url_for('static', filename='css/bootstrap.min.css') }}" rel="stylesheet" media="screen">
+    <link href="{{ url_for('static', filename='css/main.css') }}" rel="stylesheet">
+  </head>
+  <body>
+<!--START Main Content =====================================================-->
+{% block main_content %}{% endblock %}
+<!--END   MAin Content =====================================================--> 
+    <script src="http://code.jquery.com/jquery-latest.js"></script>
+    <script src="{{ url_for('static', filename='js/bootstrap.min.js') }}"></script>
+    <script type="text/javascript">
+jQuery(document).ready(function () {
+  jQuery('a').click(function () {
+      $(this).closest('li').siblings().find('ul').slideUp();
+      $(this).siblings('ul').slideToggle("fast");
+      if($(this).find('span').attr('class') == 'glyphicon glyphicon-plus'){
+        $(this).find('span').attr('class', 'glyphicon glyphicon-minus');
+      }
+      else{
+        $(this).find('span').attr('class','glyphicon glyphicon-plus');
+      }
+    });
+});
+      </script>
+  </body>
+</html>

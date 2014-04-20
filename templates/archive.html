@@ -1,0 +1,36 @@
+{# Archive Panel
+
+Description:
+  A panel that contains an expandable list of archived items. 
+
+Namespace:
+  - arhives: A dictionary of archives along with the blog in each archive.    
+  - active_archives: A list of active archives.
+                                                                             #}
+
+<!--START Archive ==========================================================-->
+<div class="panel panel-default">
+  <div class="panel-heading">Archive</div>
+  <div class="panel-body">
+    <ul class="nav nav-pills nav-stacked">
+   
+{% for archive in archives %}
+     
+      <li style="display:block" class='archive'><a href="#"><span class='glyphicon glyphicon-plus'></span>&emsp;<b>{{ archive }}</b></a>
+        <ul class="nav nav-pills nav-stacked">
+
+    {% for blog_name in archives[archive] %}      
+        
+          <li><a href="#"><span class='glyphicon glyphicon-play btn-sm'></span>&nbsp;{{ blog_name }}</a></li>
+
+    {% endfor %} 
+
+        </ul>
+      </li>
+
+{% endfor %}
+
+    </ul>
+  </div>
+</div>
+<!--END   Archive ==========================================================-->
